@@ -1,6 +1,7 @@
 //Business Logic
 function palindromeTest (a) {
-  var testPhrase = a.split("");
+  var removeSpace = a.replace(/\s+/g,'')
+  var testPhrase = removeSpace.split("");
   for (var i=0; i<=testPhrase.length; i+=1) {
     if (testPhrase[i]!==testPhrase[testPhrase.length-(i+1)]) {
       return "Not a Palindrome!";
